@@ -1,4 +1,5 @@
 title: "Rosamby Royal Classroom"
-baseurl: "/Clemz-Student-Scoreboard"  # Include this only for project sites
-url: "https://clemzclems.github.io"  # Your GitHub Pages URL
+baseurl: "/Clemz-Student-Scoreboard"  # Keep this if it's a project site
+url: "https://clemzclems.github.io"  # GitHub Pages base URL
 markdown: kramdown
+theme: minima  # Optional, but good to specify a theme
