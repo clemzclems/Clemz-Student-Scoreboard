@@ -1,3 +1,4 @@
 title: "Rosamby Royal Classroom"
-baseurl: "/my-jekyll-project"
+baseurl: "/Clemz-Student-Scoreboard"  # Include this only for project sites
+url: "https://clemzclems.github.io"  # Your GitHub Pages URL
 markdown: kramdown
