@@ -97,8 +97,9 @@
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
     <!-- Header -->
-    <header>
+    <header class="header-container">
         <h1>{{ site.title }}</h1>
+        <img src="{{ site.baseurl }}/assets/images/logo.png" alt="Clemz Clemz Academy Logo" class="logo">
     </header>
 
     <!-- Banner Image -->
@@ -111,37 +112,7 @@
         {{ content }}
     </main>
 
-    <!-- Example Table -->
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Class</th>
-                <th>Grade</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>John Doe</td>
-                <td>16</td>
-                <td>10A</td>
-                <td>A</td>
-            </tr>
-            <tr>
-                <td>Jane Smith</td>
-                <td>15</td>
-                <td>9B</td>
-                <td>B</td>
-            </tr>
-            <tr>
-                <td>Mark Johnson</td>
-                <td>17</td>
-                <td>11C</td>
-                <td>C</td>
-            </tr>
-        </tbody>
-    </table>
+
 
     <!-- Footer -->
     <footer>
