@@ -31,9 +31,9 @@ layout: default
   - [JSS 1 Mathematics](./tables/jss1-DLAmathematics.md)  
   - [JSS 2 Mathematics](./tables/jss2-DLAmathematics.md)  
   - [JSS 3 Mathematics](./tables/jss3-DLAmathematics.md)  
-  - [JSS 1 Basic Science](./tables/jss1-DLAbasicscience.md)  
-  - [JSS 2 Basic Science](./tables/jss2-DLAbasicscience.md)  
-  - [JSS 3 Basic Science](./tables/jss3-DLAbasicscience.md)  
+  - [JSS 1 Basic Science](./tables/jss1-DLAbasic-science.md)  
+  - [JSS 2 Basic Science](./tables/jss2-DLAbasic-science.md)  
+  - [JSS 3 Basic Science](./tables/jss3-DLAbasic-science.md)  
   - [SSS 1 Mathematics](./tables/sss1-DLAmathematics.md)  
   - [SSS 1 Physics](./tables/sss1-DLAphysics.md)  
 
