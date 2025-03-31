@@ -3,7 +3,7 @@ title: Home
 layout: default
 ---
 
-# ROSAMBY ROYAL CLASSROOM  
+# ALL SCHOOL CLASSROOM RESULTS  
 **Weighting: 20% 20% 60%**
 
 ### View Results by Class and Subject:
