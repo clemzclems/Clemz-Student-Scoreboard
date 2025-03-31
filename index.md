@@ -37,3 +37,8 @@ layout: default
   - [SSS 1 Mathematics](./tables/sss1-DLAmathematics.md)  
   - [SSS 1 Physics](./tables/sss1-DLAphysics.md)  
 
+
+<div class="author-bio" style="text-align: center; margin-top: 40px;">
+    <img src="{{ site.baseurl }}/assets/images/author.jpg" alt="Author Image" style="max-width: 150px; border-radius: 50%;" />
+    <p>About the Author: Elimian Clement, Ehinomen</p>
+</div>
