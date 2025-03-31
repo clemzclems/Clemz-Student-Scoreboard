@@ -1,8 +1,8 @@
-
----
-
-title: "Clemz Clemz Academy" baseurl: "/Clemz-Student-Scoreboard"  # Keep this if it's a project site url: "https://clemzclems.github.io"  # GitHub Pages base URL markdown: kramdown theme: minima  # Optional, but good to specify a theme layout: default permalink: /contact/
-
+title: "Clemz Clemz Academy"
+baseurl: "/Clemz-Student-Scoreboard"  # Keep this if it's a project site
+url: "https://clemzclems.github.io"  # GitHub Pages base URL
+markdown: kramdown
+theme: minima  # Optional, but good to specify a theme
 <h1>Contact Clemz Clemz Academy</h1><form action="https://formspree.io/f/mwpvdgeo" method="POST">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required><label for="email">Email:</label>
