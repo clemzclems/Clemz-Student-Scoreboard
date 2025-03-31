@@ -1,4 +1,5 @@
 title: "Clemz Clemz Academy"
+logo: "/assets/images/logo.png"  # Path to the logo
 baseurl: "/Clemz-Student-Scoreboard"  # Keep this if it's a project site
 url: "https://clemzclems.github.io"  # GitHub Pages base URL
 markdown: kramdown
