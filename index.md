@@ -5,6 +5,7 @@ layout: default
 <div class="banner-container" style="width: 100%; overflow: hidden; margin-bottom: 30px;">
     <img src="{{ site.baseurl }}/assets/images/banner.jpg" alt="Banner Image" style="width: 100%; height: auto;" />
 </div>
+
 # ALL SCHOOL CLASSROOM RESULTS  
 ### RRCR Results by Class and Subject:  
 **Weighting: 20% 20% 60%**
