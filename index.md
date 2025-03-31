@@ -39,6 +39,6 @@ layout: default
 
 
 <div class="author-bio" style="text-align: center; margin-top: 40px;">
-    <img src="{{ site.baseurl }}/assets/images/author.jpg" alt="Author Image" style="max-width: 150px; border-radius: 50%;" />
-    <p>About the Author: Elimian Clement, Ehinomen</p>
+    <img src="{{ site.baseurl }}/assets/images/author.jpg" alt="Author Image" style="max-width: 120px; border-radius: 50%; margin-bottom: 15px;" />
+    <p style="font-size: 1.1em; line-height: 1.6; color: #333;">About the Author: Elimian Clement, Ehinomen</p>
 </div>
