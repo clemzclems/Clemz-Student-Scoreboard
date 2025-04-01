@@ -1,8 +1,7 @@
 ---
 layout: post
-title: "First Blog Post"
+title: "My First Blog Post"
 date: 2025-04-01
-categories: updates
 ---
 
 Welcome to the first blog post of Clemz Clems Academy!
