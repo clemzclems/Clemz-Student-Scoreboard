@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+l<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,11 +18,12 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
 
-        
         .logo {
-            width: 8.5%; /* Reduced by half */
+            width: 12%; /* Adjusted for better balance */
         }
 
         /* Table Styling */
@@ -34,21 +35,32 @@
         }
 
         th, td {
-            padding: 12px;
+            padding: 15px;
             text-align: left;
             border: 2px solid #000;
+            font-size: 1.1rem;
         }
 
         th {
             background-color: #333;
             color: #fff;
+            text-transform: uppercase;
         }
 
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
 
-        /* Navigation Fix */
+        tr:hover {
+            background-color: #eaeaea;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: #333;
+            padding: 15px 0;
+        }
+
         nav ul {
             list-style: none;
             padding: 0;
@@ -57,17 +69,57 @@
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 0 20px;
         }
 
         nav ul li a {
             text-decoration: none;
             font-weight: bold;
+            color: #fff;
+            font-size: 1.1rem;
         }
+
+        nav ul li a:hover {
+            color: #f39c12;
+            text-decoration: underline;
+        }
+
+        /* Author Bio Styling */
+        .author-bio {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .author-bio img {
+            max-width: 100px;
+            border-radius: 50%;
+            border: 3px solid #f39c12;
+        }
+
+        .author-bio p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
     </style>
 </head>
 <body>
-    
 
     <!-- Navigation Menu -->
     <nav>
@@ -83,15 +135,34 @@
         {{ content }}
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Clemz Clemz Academy</p>
-    </footer>
-
-    <!-- Author Bio (Single Instance) -->
-    <div class="author-bio" style="text-align:center; margin-top:40px;">
-        <img src="{{ site.baseurl }}/assets/images/author.jpg" alt="Author Image" style="max-width:75px; border-radius:50%;"> <!-- Reduced by half -->
+    <!-- Author Bio -->
+    <div class="author-bio">
+        <img src="{{ site.baseurl }}/assets/images/author.jpg" alt="Author Image">
         <p>About the Author: Elimian Clement, Ehinomen</p>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Clemz Clemz Academy. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Dark Mode Toggle -->
+    <script>
+        // Check if dark mode was already set by the user
+        if(localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            const currentMode = document.body.classList.toggle('dark-mode');
+            if (currentMode) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+    </script>
+
 </body>
 </html>
