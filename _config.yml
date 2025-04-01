@@ -10,6 +10,7 @@ markdown: kramdown
 
 # Theme
 theme: minima  # Ensure Minima is installed or replace with another theme
+show_excerpts: true
 
 # Blog Posts Configuration
 collections:
