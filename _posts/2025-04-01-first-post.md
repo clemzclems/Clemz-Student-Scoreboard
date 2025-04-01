@@ -1,11 +1,13 @@
 ---
-title: Results for 24th March 2025
-layout: default
-date: 2025-03-24
-categories: results
+layout: post
+title: "First Blog Post"
+date: 2025-04-01
+categories: updates
 ---
 
-# School Results - 24th March 2025
+Welcome to the first blog post of Clemz Clems Academy!
+
+# School Results - 1st April 2025
 
 Below are the results for various classes and subjects.
 
