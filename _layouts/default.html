@@ -3,140 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} | {{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
     <style>
-        /* Dark Mode Styles */
-        body.dark-mode {
-            background-color: #121212;
-            color: white;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
 
-        /* Header Container */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
         .header-container {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding: 10px;
+            align-items: center;
         }
 
-        /* Banner Styling */
-        .banner-container {
-            flex: 1;
-            max-width: 60%;
+        .logo-container h1 {
+            margin: 0;
+            font-size: 36px;
         }
 
-        .banner-container img {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Logo Styling */
-        .logo-container {
-            max-width: 35%;
-            text-align: right;
-        }
-
-        .logo-container img {
-            max-width: 150px;
-            height: auto;
-        }
-
-        /* Navigation Styling */
-        .navigation {
-            background-color: #333;
-            padding: 10px 0;
-        }
-
-        .navigation ul {
+        nav ul {
             list-style: none;
-            display: flex;
-            justify-content: center;
             padding: 0;
             margin: 0;
+            display: flex;
+            justify-content: center;
         }
 
-        .navigation ul li {
+        nav ul li {
             margin: 0 15px;
         }
 
-        .navigation ul li a {
+        nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: bold;
         }
 
-        .navigation ul li a:hover {
+        nav ul li a:hover {
             text-decoration: underline;
         }
 
-        /* Author Bio Styles */
-        .author-bio {
-            text-align: center;
-            margin-top: 40px;
+        main {
+            padding: 20px;
+            background-color: #fff;
         }
 
-        .author-bio img {
-            max-width: 150px;
-            border-radius: 50%;
+        .post {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+
+        .post h2 {
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .post p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
-    <!-- Dark Mode Toggle Button -->
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-
     <!-- Header -->
-    <header class="header-container">
-        <div class="banner-container">
-            <img src="{{ site.baseurl }}/assets/images/banner.jpg" alt="Banner Image">
-        </div>
-        <div class="logo-container">
-            <img src="{{ site.baseurl }}/assets/images/logo.png" alt="Clemz Clemz Academy Logo">
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <h1>{{ site.title }}</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ site.baseurl }}/">Home</a></li>
+                    <li><a href="{{ site.baseurl }}/about">About</a></li>
+                    <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
+                    <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Navigation Menu -->
-    <nav class="navigation">
-        <ul>
-            <li><a href="{{ site.baseurl }}/">Home</a></li>
-            <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
-            <li><a href="{{ site.baseurl }}/about">About</a></li>
-            <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
-        </ul>
-    </nav>
-
     <!-- Main Content -->
     <main>
-        {{ content }}
+        <h1>{{ page.title }}</h1> <!-- Page title (e.g., "Blog" page title) -->
+
+        {% if page.layout == "blog" %}
+            <!-- Loop through blog posts -->
+            {% for post in site.posts %}
+                <div class="post">
+                    <h2>{{ post.title }}</h2>
+                    <p>Posted on {{ post.date | date: "%B %d, %Y" }} by {{ post.author }}</p>
+                    <p>{{ post.excerpt }}</p>
+                    <a href="{{ post.url }}">Read more...</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <!-- Add static content for other pages (e.g., About, Contact) -->
+            <p>Welcome to Clemz Clems Academy! Here you will find all the latest updates and information about our programs.</p>
+        {% endif %}
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Clemz Clemz Academy</p>
-        <!-- Author Bio (Only in Footer Now) -->
-        <div class="author-bio">
-            <img src="{{ site.baseurl }}/assets/images/author.jpg" alt="Author Image" />
-            <p>About the Author: Elimian Clement, Ehinomen</p>
-        </div>
+        <p>&copy; 2025 Clemz Clems Academy</p>
+        <p>All rights reserved.</p>
     </footer>
-
-    <!-- JavaScript for Dark Mode -->
-    <script>
-        // Check if dark mode was already set by the user
-        if(localStorage.getItem('darkMode') === 'enabled') {
-            document.body.classList.add('dark-mode');
-        }
-
-        // Function to toggle dark mode
-        function toggleDarkMode() {
-            const currentMode = document.body.classList.toggle('dark-mode');
-            if (currentMode) {
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                localStorage.setItem('darkMode', 'disabled');
-            }
-        }
-    </script>
 </body>
 </html>
