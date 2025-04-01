@@ -1,11 +1,40 @@
 title: "Clemz Clemz Academy"
 logo: "/assets/images/logo.png"  # Path to the logo
-baseurl: "/Clemz-Student-Scoreboard"  # Keep this if it's a project site
-url: "https://clemzclems.github.io"  # GitHub Pages base URL
-markdown: kramdown
-theme: minima  # Optional, but good to specify a theme
 
-# Posts Settings
+# Site URL settings
+baseurl: "/Clemz-Student-Scoreboard"  # Keep this if hosted as a GitHub Pages project site
+url: "https://clemzclems.github.io"  # Base URL for the live site
+
+# Markdown Processing
+markdown: kramdown
+
+# Theme
+theme: minima  # Ensure Minima is installed or replace with another theme
+
+# Blog Posts Configuration
 collections:
   blog:
     output: true
+    permalink: /blog/:path/  # Ensures clean URLs for blog posts
+
+# Navigation Links (Optional, for customization)
+nav_links:
+  Home: "/"
+  Blog: "/blog/"
+  About: "/about/"
+  Contact: "/contact/"
+
+# Plugins (Optional, but useful for extended functionality)
+plugins:
+  - jekyll-feed  # Adds RSS feed support
+  - jekyll-seo-tag  # Improves SEO metadata
+
+# Pagination (If needed)
+paginate: 5  # Number of posts per page
+paginate_path: "/blog/page:num/"
+
+# Exclude files from Jekyll build (Optional)
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
