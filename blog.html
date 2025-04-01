@@ -3,14 +3,30 @@ layout: default
 title: Blog
 permalink: /blog/
 ---
-<h1>Blog</h1>
+
+<h1>Welcome to Our Blog</h1>
+<p>Stay updated with the latest news, insights, and updates from Clemz Clems Academy. Explore our posts below.</p>
+
 <div class="blog-posts">
-    {% for post in site.posts %}
-        <article class="blog-post">
-            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-            <p><small>Posted on {{ post.date | date: "%B %d, %Y" }}</small></p>
-            <p>{{ post.excerpt }}</p>
-            <a href="{{ post.url | relative_url }}">Read more...</a>
-        </article>
-    {% endfor %}
+    {% if site.posts.size > 0 %}
+        {% for post in site.posts %}
+            <article class="blog-post">
+                <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                <p><small>Posted on {{ post.date | date: "%B %d, %Y" }} by {{ post.author | default: "Admin" }}</small></p>
+                
+                {% if post.categories %}
+                    <p><strong>Categories:</strong> 
+                        {% for category in post.categories %}
+                            <a href="{{ site.baseurl }}/categories/{{ category | slugify }}/">{{ category }}</a>
+                        {% endfor %}
+                    </p>
+                {% endif %}
+                
+                <p>{{ post.excerpt }}</p>
+                <a href="{{ post.url | relative_url }}">Read more...</a>
+            </article>
+        {% endfor %}
+    {% else %}
+        <p>No posts available yet. Check back soon!</p>
+    {% endif %}
 </div>
