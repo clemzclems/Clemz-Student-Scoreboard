@@ -1,14 +1,16 @@
+
+
 ---
 layout: post
 title: "My First Blog Post"
 date: 2025-04-01
-author: "Elimian Clement"
-excerpt: "This is an excerpt of my first blog post! Read on to learn more about the academy."
+author: "Clemz Clems"
+categories: [Updates]
+tags: [jekyll, blog]
 ---
+Welcome to my first blog post! This is a test post for my Jekyll blog.  
+Jekyll makes it easy to create and manage blog content.
 
-# My First Blog Post
-
-Welcome to the first post on our blog! Clemz Clems Academy is committed to providing high-quality education. Stay tuned for more posts that highlight our values, events, and other exciting updates.
 
 Feel free to reach out if you have any questions or comments!
 
