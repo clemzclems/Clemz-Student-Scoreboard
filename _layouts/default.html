@@ -12,33 +12,31 @@
             color: white;
         }
 
-        /* Light Mode Table Styling */
+        /* Table Styling */
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         th, td {
             padding: 12px 15px;
             text-align: left;
-            border: 2px solid #444;
+            border: 2px solid #333;
         }
 
         th {
-            background-color: #333;
+            background-color: #444;
             color: white;
         }
 
         tr:nth-child(even) {
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
         }
 
         tr:hover {
-            background-color: #e1e1e1;
+            background-color: #ddd;
         }
 
         /* Dark Mode Table Styling */
@@ -58,7 +56,7 @@
             background-color: #666;
         }
 
-        /* Toggle Button Styles */
+        /* Toggle Button */
         .dark-mode-toggle {
             position: fixed;
             top: 20px;
@@ -69,35 +67,52 @@
             cursor: pointer;
         }
 
-        /* Header with Logo & Banner */
+        /* Header with Banner and Logo */
         .header-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px;
             background-color: #222;
+            padding: 10px;
             color: white;
         }
 
         .banner-container {
-            flex: 1;
-            max-width: 70%;
+            width: 70%;
         }
 
         .banner-container img {
             width: 100%;
             height: auto;
+            max-height: 120px;
         }
 
         .logo-container {
-            max-width: 30%;
+            width: 30%;
             text-align: right;
         }
 
         .logo-container img {
-            width: 100%;
-            height: auto;
-            max-height: 120px;
+            width: auto;
+            height: 120px;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #555;
         }
 
         /* Author Bio */
@@ -116,18 +131,26 @@
     </style>
 </head>
 <body>
-    <!-- Dark Mode Toggle Button -->
+    <!-- Dark Mode Toggle -->
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
     <!-- Header with Banner and Logo -->
     <header class="header-container">
         <div class="banner-container">
-            <img src="{{ site.baseurl }}/assets/images/banner.jpg" alt="Banner Image" />
+            <img src="{{ site.baseurl }}/assets/images/banner.jpg" alt="Banner Image">
         </div>
         <div class="logo-container">
-            <img src="{{ site.baseurl }}/assets/images/logo.png" alt="Clemz Clemz Academy Logo" />
+            <img src="{{ site.baseurl }}/assets/images/logo.png" alt="Logo">
         </div>
     </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="{{ site.baseurl }}/index.html">Home</a>
+        <a href="{{ site.baseurl }}/blog.html">Blog</a>
+        <a href="{{ site.baseurl }}/about.html">About</a>
+        <a href="{{ site.baseurl }}/contact.html">Contact</a>
+    </nav>
 
     <!-- Main Content -->
     <main>
@@ -141,7 +164,7 @@
 
     <!-- Author Bio (Only One) -->
     <div class="author-bio">
-        <img src="{{ site.baseurl }}/assets/images/author.jpg" alt="Author Image" />
+        <img src="{{ site.baseurl }}/assets/images/author.jpg" alt="Author Image">
         <p>About the Author: Elimian Clement, Ehinomen</p>
     </div>
 
