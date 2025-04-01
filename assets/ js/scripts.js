@@ -1,3 +1,10 @@
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector(".menu-toggle").addEventListener("click", function() {
+        document.querySelector(".menu").classList.toggle("open");
+    });
+});
+
 // Load scores dynamically for school tables
 document.addEventListener('DOMContentLoaded', () => {
     const tableLinks = document.querySelectorAll('.table-link');
